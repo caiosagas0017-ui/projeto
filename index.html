@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Austin Family Dentist | Modern Dental Care</title>
+    <meta name="description" content="State-of-the-art dental care in Austin, TX. Implants, root canals, and family dentistry.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Config & Custom CSS -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#0274be',
+                        secondary: '#015a96',
+                        accent: '#e0f2fe',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+
+        /* Hero Overlay Gradient */
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3));
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Top Bar -->
+    <div class="bg-primary text-white text-sm py-2 hidden md:block">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <div class="flex items-center space-x-6">
+                <span><i class="fa-regular fa-clock mr-2"></i> Mon 11-7pm | Tue-Thu 8-4pm | Fri 8-2pm</span>
+                <span><i class="fa-solid fa-location-dot mr-2"></i> 3508 Far West Blvd. Suite 310, Austin, TX</span>
+            </div>
+            <div>
+                <a href="tel:512-346-5738" class="font-semibold hover:text-accent transition"><i class="fa-solid fa-phone mr-2"></i> (512) 346-5738</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="#" class="flex-shrink-0 flex items-center">
+                        <!-- Placeholder for Logo - Using Text for robustness -->
+                        <span class="text-2xl font-bold text-primary tracking-tight">Austin Family <span class="text-gray-800">Dentist</span></span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-primary font-medium hover:text-secondary transition">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-primary transition">Our Dentists</a>
+                    <a href="#services" class="text-gray-600 hover:text-primary transition">Services</a>
+                    <a href="#contact" class="text-gray-600 hover:text-primary transition">Contact Us</a>
+                    <a href="tel:512-346-5738" class="bg-primary text-white px-6 py-2.5 rounded-full font-medium hover:bg-secondary hover:shadow-lg transition transform hover:-translate-y-0.5">Emergency Care</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="flex items-center md:hidden">
+                    <button type="button" id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white border-t border-gray-100 absolute w-full shadow-lg" id="mobile-menu">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#" class="block px-3 py-3 text-base font-medium text-primary bg-blue-50 rounded-md">Home</a>
+                <a href="#about" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Our Dentists</a>
+                <a href="#services" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Services</a>
+                <a href="#contact" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Contact Us</a>
+                <a href="tel:512-346-5738" class="block mt-4 text-center bg-primary text-white px-4 py-3 rounded-md font-medium">Call: (512) 346-5738</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative bg-gray-900 h-[600px] flex items-center">
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img class="w-full h-full object-cover" src="https://placehold.co/1920x1080/e2e8f0/94a3b8?text=Preview" alt="Modern Dental Clinic">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 animate-on-scroll">
+            <div class="max-w-2xl text-white">
+                <span class="inline-block py-1 px-3 rounded-full bg-blue-600/30 border border-blue-400 backdrop-blur-sm text-sm font-semibold mb-4">
+                    <i class="fa-solid fa-star text-yellow-400 mr-1"></i> Neighborhood Faves 2024
+                </span>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight mb-6">
+                    A Phenomenal <br><span class="text-blue-400">Dental Experience</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-200 mb-8 leading-relaxed">
+                    State-of-the-art treatment for your entire family. Comfortable, permanent, and natural-looking results in Austin, TX.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="bg-primary hover:bg-secondary text-white px-8 py-4 rounded-full font-semibold text-center transition shadow-lg hover:shadow-xl">
+                        Book Appointment
+                    </a>
+                    <a href="#services" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-semibold text-center transition">
+                        Explore Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+                <h2 class="text-sm font-bold tracking-wide text-primary uppercase mb-2">Get Well Soon</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-gray-900">Our Premium Services</p>
+                <div class="mt-4 w-24 h-1 bg-primary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-300 border border-gray-100 transform hover:-translate-y-2 animate-on-scroll delay-100 group">
+                    <div class="w-16 h-16 bg-accent rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition">
+                        <i class="fa-solid fa-tooth text-3xl text-primary group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Dental Implants</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        A state-of-the-art treatment for missing teeth. Permanent, comfortable, natural-looking, and easy to care for to maintain your oral health.
+                    </p>
+                    <a href="#" class="text-primary font-semibold flex items-center hover:text-secondary">
+                        Learn more <i class="fa-solid fa-arrow-right ml-2 text-sm transition transform group-hover:translate-x-1"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-300 border border-gray-100 transform hover:-translate-y-2 animate-on-scroll delay-200 group">
+                    <div class="w-16 h-16 bg-accent rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition">
+                        <i class="fa-solid fa-staff-snake text-3xl text-primary group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Root Canals</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        When the dental pulp is damaged, we provide pain-free endodontic therapy to save your natural tooth and alleviate discomfort immediately.
+                    </p>
+                    <a href="#" class="text-primary font-semibold flex items-center hover:text-secondary">
+                        Learn more <i class="fa-solid fa-arrow-right ml-2 text-sm transition transform group-hover:translate-x-1"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-300 border border-gray-100 transform hover:-translate-y-2 animate-on-scroll delay-300 group">
+                    <div class="w-16 h-16 bg-accent rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition">
+                        <i class="fa-solid fa-wand-magic-sparkles text-3xl text-primary group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">White Fillings</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Durable resin composite fillings that match your natural teeth, eliminating the "metal-mouth" look and restoring your beautiful smile.
+                    </p>
+                    <a href="#" class="text-primary font-semibold flex items-center hover:text-secondary">
+                        Learn more <i class="fa-solid fa-arrow-right ml-2 text-sm transition transform group-hover:translate-x-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-gray-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="w-full lg:w-1/2 animate-on-scroll relative">
+                    <!-- Decorative element -->
+                    <div class="absolute -inset-4 bg-primary/20 rounded-3xl transform rotate-3 scale-105 blur-lg -z-10"></div>
+                    <img src="https://placehold.co/800x800/e2e8f0/94a3b8?text=Preview" alt="Dentist working" class="rounded-3xl shadow-2xl object-cover w-full h-[500px]">
+                </div>
+                
+                <div class="w-full lg:w-1/2 animate-on-scroll delay-200">
+                    <h2 class="text-sm font-bold tracking-wide text-primary uppercase mb-2">About Austin Family Dentist</h2>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6 leading-tight">
+                        We pride ourselves on providing a phenomenal dental experience.
+                    </h3>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Dr. Tucker and all the staff at Austin Family Dentistry pride themselves in providing a phenomenal dental experience for patients coming in for visits from all over the Austin, TX area. 
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Our mission is to combine advanced dental technology with a compassionate, patient-first approach to ensure your smile is always bright and healthy.
+                    </p>
+                    
+                    <div class="flex items-center gap-4">
+                        <a href="#" class="bg-gray-900 text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-800 transition shadow-md">
+                            Read Our Story
+                        </a>
+                        <div class="flex items-center ml-4">
+                            <div class="flex -space-x-2">
+                                <img class="w-10 h-10 rounded-full border-2 border-white object-cover" src="https://placehold.co/100x100/e2e8f0/94a3b8?text=Preview" alt="Patient">
+                                <img class="w-10 h-10 rounded-full border-2 border-white object-cover" src="https://placehold.co/100x100/e2e8f0/94a3b8?text=Preview" alt="Patient">
+                                <img class="w-10 h-10 rounded-full border-2 border-white object-cover" src="https://placehold.co/100x100/e2e8f0/94a3b8?text=Preview" alt="Patient">
+                            </div>
+                            <span class="ml-4 text-sm font-medium text-gray-600">500+ Happy Patients</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Meet Our Expert Dentists</h2>
+                <div class="mt-4 w-24 h-1 bg-primary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Team Member 1 -->
+                <div class="text-center animate-on-scroll delay-100 group">
+                    <div class="relative w-64 h-64 mx-auto mb-6 rounded-full overflow-hidden shadow-xl border-4 border-white group-hover:border-accent transition duration-300">
+                        <!-- Placeholder photo -->
+                        <img src="https://placehold.co/400x400/e2e8f0/94a3b8?text=Preview" alt="Dr. Brian D Tucker" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900">Dr. Brian D Tucker</h3>
+                    <p class="text-primary font-medium mb-4">Lead Dentist & Owner</p>
+                    <p class="text-gray-600 px-4">Born and raised in New Jersey, Dr. Tucker brings years of expertise and a passion for creating perfect smiles.</p>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="text-center animate-on-scroll delay-200 group">
+                    <div class="relative w-64 h-64 mx-auto mb-6 rounded-full overflow-hidden shadow-xl border-4 border-white group-hover:border-accent transition duration-300">
+                        <img src="https://placehold.co/400x400/e2e8f0/94a3b8?text=Preview" alt="Dr. Sara Kieschnick" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900">Dr. Sara Kieschnick</h3>
+                    <p class="text-primary font-medium mb-4">Dentist</p>
+                    <p class="text-gray-600 px-4">Raised in Texas, she earned her BA graduating summa cum laude and focuses on gentle, compassionate care.</p>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="text-center animate-on-scroll delay-300 group">
+                    <div class="relative w-64 h-64 mx-auto mb-6 rounded-full overflow-hidden shadow-xl border-4 border-white group-hover:border-accent transition duration-300">
+                        <img src="https://placehold.co/400x400/e2e8f0/94a3b8?text=Preview" alt="Dr. Priscilla Wong" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900">Dr. Priscilla Wong</h3>
+                    <p class="text-primary font-medium mb-4">Dentist</p>
+                    <p class="text-gray-600 px-4">Relocated to Austin from Canada, she loves the outdoors and bringing confident smiles to her patients.</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center animate-on-scroll delay-300">
+                <a href="#" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full text-primary bg-accent hover:bg-blue-100 transition">
+                    View Entire Team
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-gray-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-3xl sm:text-4xl font-extrabold">Contact Us</h2>
+                <div class="mt-4 w-24 h-1 bg-primary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Contact Info -->
+                <div class="space-y-8 animate-on-scroll">
+                    <div class="bg-gray-800 p-8 rounded-2xl flex items-start space-x-6 hover:bg-gray-750 transition">
+                        <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-location-dot text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">Location</h4>
+                            <p class="text-gray-400">3508 Far West Blvd,<br>Suite 310, Austin, TX 78731</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-800 p-8 rounded-2xl flex items-start space-x-6 hover:bg-gray-750 transition">
+                        <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-phone text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">Phone</h4>
+                            <p class="text-gray-400">Call us today to schedule</p>
+                            <a href="tel:512-346-5738" class="text-2xl font-semibold text-blue-400 hover:text-white transition">(512) 346-5738</a>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-800 p-8 rounded-2xl flex items-start space-x-6 hover:bg-gray-750 transition">
+                        <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-envelope text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">Email</h4>
+                            <p class="text-gray-400">For general inquiries</p>
+                            <a href="mailto:info@austinfamilydentist.com" class="text-lg font-semibold text-blue-400 hover:text-white transition">info@austinfamilydentist.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div class="h-full min-h-[400px] rounded-2xl overflow-hidden shadow-2xl animate-on-scroll delay-200">
+                    <iframe 
+                        src="https://www.google.com/maps/embed/v1/place?q=Austin+Family+Dentist+3508+Far+W+Blvd+%23310%2C+Austin%2C+TX+78731&key=AIzaSyD09zQ9PNDNNy9TadMuzRV_UsPUoWKntt8" 
+                        class="w-full h-full border-0" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 text-gray-400 py-12 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <span class="text-2xl font-bold text-white tracking-tight block mb-2">Austin Family Dentist</span>
+                <p>&copy; 2026 by Austin Family Dentist. All rights reserved.</p>
+            </div>
+            
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-facebook text-2xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-instagram text-2xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-yelp text-2xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts for interactivity and animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const icon = btn.querySelector('i');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                if(menu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                }
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        e.preventDefault();
+                        // Close mobile menu if open
+                        menu.classList.add('hidden');
+                        icon.classList.remove('fa-xmark');
+                        icon.classList.add('fa-bars');
+                        
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Intersection Observer for scroll animations
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target); // Only animate once
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
