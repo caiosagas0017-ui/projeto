@@ -12,7 +12,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -61,7 +61,7 @@
 
     <!-- Barra Superior -->
     <div class="bg-gray-100 py-3.5 hidden lg:block border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
             
             <!-- Open Hours -->
             <div class="flex items-center group cursor-default">
@@ -90,54 +90,57 @@
         </div>
     </div>
 
-    <!-- Navegação -->
+    <!-- Navegação (Com layout de 3 colunas para centrar perfeitamente o menu) -->
     <nav class="bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 sticky top-0 z-50 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20 lg:h-24 gap-4 xl:gap-8">
-                <!-- Logo -->
-                <div class="flex items-center flex-shrink-0">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20 lg:h-24">
+                
+                <!-- Logo (Coluna 1 - Esquerda) -->
+                <div class="flex items-center flex-shrink-0 lg:w-1/4">
                     <a href="#" class="flex items-center group">
                         <img class="h-14 sm:h-16 lg:h-16 xl:h-20 w-auto max-w-[220px] md:max-w-[250px] lg:max-w-[280px] xl:max-w-none object-contain transition-transform duration-300 group-hover:scale-105" src="https://austinfamilydentist.com/wp-content/uploads/2020/04/logo1-1.png" alt="Austin Family Dentist Logo">
                     </a>
                 </div>
                 
-                <!-- Menu de Ecrã Inteiro (Desktop) -->
-                <div class="hidden lg:flex items-center justify-end flex-1 space-x-1 xl:space-x-3">
-                    <a href="#" class="group relative px-1.5 xl:px-3 py-2 text-primary font-semibold text-[11px] xl:text-[12px] tracking-wider uppercase hover:text-secondary transition-colors whitespace-nowrap">
+                <!-- Menu de Ecrã Inteiro (Coluna 2 - Centro Exato) -->
+                <div class="hidden lg:flex items-center justify-center flex-1 space-x-3 xl:space-x-5">
+                    <a href="#" class="group relative px-1 py-2 text-gray-700 font-bold text-[11px] xl:text-[12px] tracking-[0.08em] uppercase hover:text-primary transition-colors whitespace-nowrap">
                         Home
                         <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-1/2 group-hover:left-1/4 rounded-t-md"></span>
                     </a>
-                    <a href="#about" class="group relative px-1.5 xl:px-3 py-2 text-primary font-semibold text-[11px] xl:text-[12px] tracking-wider uppercase hover:text-secondary transition-colors whitespace-nowrap">
-                        About Us
+                    <a href="#about" class="group relative px-1 py-2 text-gray-700 font-bold text-[11px] xl:text-[12px] tracking-[0.08em] uppercase hover:text-primary transition-colors whitespace-nowrap">
+                        About
                         <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-1/2 group-hover:left-1/4 rounded-t-md"></span>
                     </a>
-                    <a href="#dentists" class="group relative px-1.5 xl:px-3 py-2 text-primary font-semibold text-[11px] xl:text-[12px] tracking-wider uppercase hover:text-secondary transition-colors whitespace-nowrap">
-                        Our Dentists
+                    <a href="#dentists" class="group relative px-1 py-2 text-gray-700 font-bold text-[11px] xl:text-[12px] tracking-[0.08em] uppercase hover:text-primary transition-colors whitespace-nowrap">
+                        Dentists
                         <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-1/2 group-hover:left-1/4 rounded-t-md"></span>
                     </a>
-                    <a href="#team" class="group relative px-1.5 xl:px-3 py-2 text-primary font-semibold text-[11px] xl:text-[12px] tracking-wider uppercase hover:text-secondary transition-colors whitespace-nowrap">
-                        Our Team
+                    <a href="#team" class="group relative px-1 py-2 text-gray-700 font-bold text-[11px] xl:text-[12px] tracking-[0.08em] uppercase hover:text-primary transition-colors whitespace-nowrap">
+                        Team
                         <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-1/2 group-hover:left-1/4 rounded-t-md"></span>
                     </a>
-                    <a href="#services" class="group relative px-1.5 xl:px-3 py-2 text-primary font-semibold text-[11px] xl:text-[12px] tracking-wider uppercase hover:text-secondary transition-colors whitespace-nowrap">
+                    <a href="#services" class="group relative px-1 py-2 text-gray-700 font-bold text-[11px] xl:text-[12px] tracking-[0.08em] uppercase hover:text-primary transition-colors whitespace-nowrap">
                         Services
                         <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-1/2 group-hover:left-1/4 rounded-t-md"></span>
                     </a>
-                    <a href="#new-patients" class="group relative px-1.5 xl:px-3 py-2 text-primary font-semibold text-[11px] xl:text-[12px] tracking-wider uppercase hover:text-secondary transition-colors whitespace-nowrap">
-                        New Patients
+                    <a href="#new-patients" class="group relative px-1 py-2 text-gray-700 font-bold text-[11px] xl:text-[12px] tracking-[0.08em] uppercase hover:text-primary transition-colors whitespace-nowrap">
+                        Patients
                         <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-1/2 group-hover:left-1/4 rounded-t-md"></span>
                     </a>
-                    <a href="#faqs" class="group relative px-1.5 xl:px-3 py-2 text-primary font-semibold text-[11px] xl:text-[12px] tracking-wider uppercase hover:text-secondary transition-colors whitespace-nowrap">
-                        FAQ's
+                    <a href="#faqs" class="group relative px-1 py-2 text-gray-700 font-bold text-[11px] xl:text-[12px] tracking-[0.08em] uppercase hover:text-primary transition-colors whitespace-nowrap">
+                        FAQ
                         <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-1/2 group-hover:left-1/4 rounded-t-md"></span>
                     </a>
-                    <a href="#contact" class="group relative px-1.5 xl:px-3 py-2 text-primary font-semibold text-[11px] xl:text-[12px] tracking-wider uppercase hover:text-secondary transition-colors whitespace-nowrap">
-                        Contact Us
-                        <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-1/2 group-hover:left-1/4 rounded-t-md"></span>
-                    </a>
-                    <a href="#emergency" class="group relative px-1.5 xl:px-3 py-2 text-primary font-semibold text-[11px] xl:text-[12px] tracking-wider uppercase hover:text-red-600 transition-colors whitespace-nowrap">
+                </div>
+
+                <!-- Botões de Ação (Coluna 3 - Direita) -->
+                <div class="hidden lg:flex items-center justify-end lg:w-1/4 space-x-4">
+                    <a href="#emergency" class="text-red-500 font-bold text-[11px] xl:text-[12px] tracking-[0.08em] uppercase hover:text-red-700 transition-colors whitespace-nowrap">
                         Emergency
-                        <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-red-600 transition-all duration-300 group-hover:w-1/2 group-hover:left-1/4 rounded-t-md"></span>
+                    </a>
+                    <a href="#contact" class="bg-primary text-white px-5 py-2.5 rounded-full font-bold text-[11px] xl:text-[12px] tracking-wider uppercase hover:bg-secondary transition-all shadow-md hover:shadow-lg whitespace-nowrap">
+                        Book Now
                     </a>
                 </div>
 
@@ -154,16 +157,19 @@
         <div class="lg:hidden hidden bg-white border-t border-gray-100 absolute w-full shadow-2xl" id="mobile-menu">
             <div class="px-4 pt-4 pb-8 space-y-2">
                 <a href="#" class="block px-4 py-3 text-sm font-bold text-primary bg-accent/30 rounded-lg uppercase tracking-wide">Home</a>
-                <a href="#about" class="block px-4 py-3 text-sm font-semibold text-gray-600 hover:text-primary hover:bg-gray-50 rounded-lg uppercase tracking-wide transition-colors">About Us</a>
-                <a href="#dentists" class="block px-4 py-3 text-sm font-semibold text-gray-600 hover:text-primary hover:bg-gray-50 rounded-lg uppercase tracking-wide transition-colors">Our Dentists</a>
-                <a href="#team" class="block px-4 py-3 text-sm font-semibold text-gray-600 hover:text-primary hover:bg-gray-50 rounded-lg uppercase tracking-wide transition-colors">Our Team</a>
+                <a href="#about" class="block px-4 py-3 text-sm font-semibold text-gray-600 hover:text-primary hover:bg-gray-50 rounded-lg uppercase tracking-wide transition-colors">About</a>
+                <a href="#dentists" class="block px-4 py-3 text-sm font-semibold text-gray-600 hover:text-primary hover:bg-gray-50 rounded-lg uppercase tracking-wide transition-colors">Dentists</a>
+                <a href="#team" class="block px-4 py-3 text-sm font-semibold text-gray-600 hover:text-primary hover:bg-gray-50 rounded-lg uppercase tracking-wide transition-colors">Team</a>
                 <a href="#services" class="block px-4 py-3 text-sm font-semibold text-gray-600 hover:text-primary hover:bg-gray-50 rounded-lg uppercase tracking-wide transition-colors">Services</a>
-                <a href="#new-patients" class="block px-4 py-3 text-sm font-semibold text-gray-600 hover:text-primary hover:bg-gray-50 rounded-lg uppercase tracking-wide transition-colors">New Patients</a>
-                <a href="#faqs" class="block px-4 py-3 text-sm font-semibold text-gray-600 hover:text-primary hover:bg-gray-50 rounded-lg uppercase tracking-wide transition-colors">FAQ's</a>
+                <a href="#new-patients" class="block px-4 py-3 text-sm font-semibold text-gray-600 hover:text-primary hover:bg-gray-50 rounded-lg uppercase tracking-wide transition-colors">Patients</a>
+                <a href="#faqs" class="block px-4 py-3 text-sm font-semibold text-gray-600 hover:text-primary hover:bg-gray-50 rounded-lg uppercase tracking-wide transition-colors">FAQ</a>
                 <a href="#contact" class="block px-4 py-3 text-sm font-semibold text-gray-600 hover:text-primary hover:bg-gray-50 rounded-lg uppercase tracking-wide transition-colors">Contact Us</a>
                 <a href="#emergency" class="block px-4 py-3 text-sm font-semibold text-red-600 hover:bg-red-50 rounded-lg uppercase tracking-wide transition-colors">Emergency</a>
                 
-                <div class="pt-4 mt-4 border-t border-gray-100">
+                <div class="pt-4 mt-4 border-t border-gray-100 flex flex-col gap-3">
+                    <a href="#contact" class="flex items-center justify-center bg-gray-900 hover:bg-black text-white px-4 py-3.5 rounded-xl font-bold uppercase tracking-wide transition-colors shadow-md">
+                        Book Now
+                    </a>
                     <a href="tel:512-346-5738" class="flex items-center justify-center bg-primary hover:bg-secondary text-white px-4 py-3.5 rounded-xl font-bold uppercase tracking-wide transition-colors shadow-md">
                         <i class="fa-solid fa-phone mr-2"></i> (512) 346-5738
                     </a>
@@ -180,22 +186,22 @@
             <div class="absolute inset-0 hero-gradient"></div>
         </div>
         
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 animate-on-scroll">
+        <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 animate-on-scroll">
             <div class="max-w-2xl text-white">
                 <span class="inline-block py-1 px-3 rounded-full bg-blue-600/30 border border-blue-400 backdrop-blur-sm text-sm font-semibold mb-4">
                     <i class="fa-solid fa-star text-yellow-400 mr-1"></i> Neighborhood Faves 2024
                 </span>
-                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight mb-6">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6">
                     A Phenomenal <br><span class="text-blue-400">Dental Experience</span>
                 </h1>
                 <p class="text-lg sm:text-xl text-gray-200 mb-8 leading-relaxed">
                     State-of-the-art treatment for your entire family. Comfortable, permanent, and natural-looking results in Austin, TX.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#contact" class="bg-primary hover:bg-secondary text-white px-8 py-4 rounded-full font-semibold text-center transition shadow-lg hover:shadow-xl">
+                    <a href="#contact" class="bg-primary hover:bg-secondary text-white px-8 py-4 rounded-full font-bold text-center transition shadow-lg hover:shadow-xl">
                         Book Appointment
                     </a>
-                    <a href="#services" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-semibold text-center transition">
+                    <a href="#services" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-bold text-center transition">
                         Explore Services
                     </a>
                 </div>
@@ -205,7 +211,7 @@
 
     <!-- Secção de Serviços -->
     <section id="services" class="py-24 bg-gray-50 border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
                 <h2 class="text-sm font-bold tracking-wide text-primary uppercase mb-2">Comprehensive Care</h2>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Dental Services</h2>
@@ -339,7 +345,7 @@
             <!-- Call to action Serviços -->
             <div class="mt-16 text-center animate-on-scroll">
                 <p class="text-gray-600 mb-6">Have questions about the ideal treatment for you?</p>
-                <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-semibold rounded-full text-white bg-primary hover:bg-secondary transition shadow-md">
+                <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-bold rounded-full text-white bg-primary hover:bg-secondary transition shadow-md">
                     Schedule Your Consultation
                 </a>
             </div>
@@ -349,7 +355,7 @@
 
     <!-- Secção Sobre (About) -->
     <section id="about" class="py-24 bg-white overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row items-center gap-16">
                 <div class="w-full lg:w-1/2 animate-on-scroll relative">
                     <!-- Elemento decorativo -->
@@ -370,7 +376,7 @@
                     </p>
                     
                     <div class="flex items-center gap-4">
-                        <a href="#about" class="bg-gray-900 text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-800 transition shadow-md">
+                        <a href="#about" class="bg-gray-900 text-white px-8 py-4 rounded-full font-bold hover:bg-gray-800 transition shadow-md">
                             Read Our Story
                         </a>
                         <div class="flex items-center ml-4">
@@ -379,7 +385,7 @@
                                 <img class="w-10 h-10 rounded-full border-2 border-white object-cover" src="https://i.pravatar.cc/100?img=2" alt="Patient">
                                 <img class="w-10 h-10 rounded-full border-2 border-white object-cover" src="https://i.pravatar.cc/100?img=3" alt="Patient">
                             </div>
-                            <span class="ml-4 text-sm font-medium text-gray-600">500+ Happy Patients</span>
+                            <span class="ml-4 text-sm font-bold text-gray-600">500+ Happy Patients</span>
                         </div>
                     </div>
                 </div>
@@ -389,7 +395,7 @@
 
     <!-- Secção de Dentistas (Our Dentists) -->
     <section id="dentists" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-20 animate-on-scroll">
                 <h2 class="text-sm font-bold tracking-wide text-primary uppercase mb-2">Our Expertise</h2>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Our Dentists</h2>
@@ -405,8 +411,8 @@
                         <img src="https://austinfamilydentist.com/wp-content/uploads/2025/08/BrianTucker.webp" alt="Dr. Brian Tucker" class="rounded-3xl shadow-xl w-full object-cover aspect-[4/5]">
                     </div>
                     <div class="w-full lg:w-3/5 space-y-4">
-                        <h3 class="text-3xl font-bold text-gray-900 uppercase">Brian D. Tucker, DMD, FAGD</h3>
-                        <p class="text-primary font-semibold text-lg uppercase tracking-wide">Lead Dentist & Owner</p>
+                        <h3 class="text-3xl font-extrabold text-gray-900 uppercase">Brian D. Tucker, DMD, FAGD</h3>
+                        <p class="text-primary font-bold text-lg uppercase tracking-wide">Lead Dentist & Owner</p>
                         <div class="text-gray-600 leading-relaxed space-y-4">
                             <p>Dr. Brian D. Tucker was born and raised in Cinnaminson, New Jersey. He received his Bachelor of Science in Biology at The College of New Jersey. He continued his studies at the University of Medicine and Dentistry of New Jersey, where he earned his dental degree. He was selected for the prestigious Omicron Kappa Upsilon (OKU) Alumni Association.</p>
                             <p>During his residency in Las Vegas, Dr. Tucker gained valuable clinical experience in all aspects of dentistry, including implants, IV sedation, cosmetic dentistry, and complex extractions. He moved to Austin in 2006.</p>
@@ -422,8 +428,8 @@
                         <img src="https://austinfamilydentist.com/wp-content/uploads/2025/08/SaraKieschnick.webp" alt="Dra. Sara Kieschnick" class="rounded-3xl shadow-xl w-full object-cover aspect-[4/5]">
                     </div>
                     <div class="w-full lg:w-3/5 space-y-4">
-                        <h3 class="text-3xl font-bold text-gray-900 uppercase">Sara Kieschnick, DDS</h3>
-                        <p class="text-primary font-semibold text-lg uppercase tracking-wide">Dentist</p>
+                        <h3 class="text-3xl font-extrabold text-gray-900 uppercase">Sara Kieschnick, DDS</h3>
+                        <p class="text-primary font-bold text-lg uppercase tracking-wide">Dentist</p>
                         <div class="text-gray-600 leading-relaxed space-y-4">
                             <p>Dr. Sara Kieschnick was born in Winnipeg, Manitoba, and grew up in Fairfax, Virginia, and Plano, Texas. She earned her bachelor's degree, graduating summa cum laude, from Austin College. She completed her Doctor of Dental Surgery (DDS) at the Texas A&M Baylor College of Dentistry in 2016.</p>
                             <p>After graduation, she completed a general practice residency in Albuquerque, New Mexico. Dr. Kieschnick regularly participates in continuing education programs, attending conferences and study groups to stay up-to-date with the latest techniques.</p>
@@ -439,8 +445,8 @@
                         <img src="https://austinfamilydentist.com/wp-content/uploads/2025/08/PriscillaWong.webp" alt="Dra. Priscilla Wong" class="rounded-3xl shadow-xl w-full object-cover aspect-[4/5]">
                     </div>
                     <div class="w-full lg:w-3/5 space-y-4">
-                        <h3 class="text-3xl font-bold text-gray-900 uppercase">Priscilla Wong, DDS</h3>
-                        <p class="text-primary font-semibold text-lg uppercase tracking-wide">Dentist</p>
+                        <h3 class="text-3xl font-extrabold text-gray-900 uppercase">Priscilla Wong, DDS</h3>
+                        <p class="text-primary font-bold text-lg uppercase tracking-wide">Dentist</p>
                         <div class="text-gray-600 leading-relaxed space-y-4">
                             <p>Dr. Priscilla Wong was born near the Canadian Rockies in Calgary, Alberta. Her family moved to Austin, Texas, in 2001, and she has been a Texan at heart ever since.</p>
                             <p>She graduated in Chemical Engineering from the University of Texas at Austin and completed her Doctor of Dental Surgery at the University of Texas Health Houston School of Dentistry.</p>
@@ -454,7 +460,7 @@
 
     <!-- Secção de Equipa (Our Team) -->
     <section id="team" class="py-24 bg-gray-50 border-t border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
                 <h2 class="text-sm font-bold tracking-wide text-primary uppercase mb-2">Meet</h2>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Our Amazing Team</h2>
@@ -531,33 +537,32 @@
 
     <!-- Novos Pacientes e FAQs / Placeholder das Secções Mencionadas no Menu -->
     <section id="new-patients" class="py-24 bg-white border-t border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
             <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6">New Patients Welcome</h2>
             <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">We are always accepting new patients! Get all the forms and information you need before your first visit.</p>
-            <a href="#contact" class="bg-primary hover:bg-secondary text-white px-8 py-4 rounded-full font-semibold transition shadow-md">Schedule First Visit</a>
+            <a href="#contact" class="bg-primary hover:bg-secondary text-white px-8 py-4 rounded-full font-bold transition shadow-md">Schedule First Visit</a>
         </div>
     </section>
 
     <section id="faqs" class="py-24 bg-gray-50 border-t border-gray-200">
-    <section id="faqs" class="py-24 bg-white border-t border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
             <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6">Frequently Asked Questions</h2>
             <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">Have questions about our treatments, insurance, or recovery times? Check out our FAQ section to learn more.</p>
-            <a href="#contact" class="bg-accent hover:bg-blue-200 text-primary px-8 py-4 rounded-full font-semibold transition shadow-md">Read FAQs</a>
+            <a href="#contact" class="bg-accent hover:bg-blue-200 text-primary px-8 py-4 rounded-full font-bold transition shadow-md">Read FAQs</a>
         </div>
     </section>
     
     <section id="emergency" class="py-24 bg-red-50 border-t border-red-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
             <h2 class="text-3xl sm:text-4xl font-extrabold text-red-600 mb-6">Dental Emergency?</h2>
             <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-8">Don't wait in pain. We offer prompt emergency dental care. Call us immediately during business hours.</p>
-            <a href="tel:512-346-5738" class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full font-semibold transition shadow-md"><i class="fa-solid fa-phone mr-2"></i> Call Now</a>
+            <a href="tel:512-346-5738" class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full font-bold transition shadow-md"><i class="fa-solid fa-phone mr-2"></i> Call Now</a>
         </div>
     </section>
 
     <!-- Secção de Contacto (Contact) -->
     <section id="contact" class="py-24 bg-gray-900 text-white relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 animate-on-scroll">
                 <h2 class="text-3xl sm:text-4xl font-extrabold">Contact Us</h2>
                 <div class="mt-4 w-24 h-1 bg-primary mx-auto rounded-full"></div>
@@ -583,7 +588,7 @@
                         <div>
                             <h4 class="text-xl font-bold mb-2">Phone</h4>
                             <p class="text-gray-400">Call us today to schedule</p>
-                            <a href="tel:512-346-5738" class="text-2xl font-semibold text-blue-400 hover:text-white transition">(512) 346-5738</a>
+                            <a href="tel:512-346-5738" class="text-2xl font-bold text-blue-400 hover:text-white transition">(512) 346-5738</a>
                         </div>
                     </div>
 
@@ -594,7 +599,7 @@
                         <div>
                             <h4 class="text-xl font-bold mb-2">Email</h4>
                             <p class="text-gray-400">For general inquiries</p>
-                            <a href="mailto:info@austinfamilydentist.com" class="text-lg font-semibold text-blue-400 hover:text-white transition">info@austinfamilydentist.com</a>
+                            <a href="mailto:info@austinfamilydentist.com" class="text-lg font-bold text-blue-400 hover:text-white transition">info@austinfamilydentist.com</a>
                         </div>
                     </div>
                 </div>
@@ -615,7 +620,7 @@
 
     <!-- Rodapé -->
     <footer class="bg-gray-950 text-gray-400 py-12 mt-auto">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="text-center md:text-left">
                 <span class="text-2xl font-bold text-white tracking-tight block mb-2">Austin Family Dentist</span>
                 <p>&copy; 2026 by Austin Family Dentist. All rights reserved.</p>
