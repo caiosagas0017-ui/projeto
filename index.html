@@ -35,7 +35,7 @@
         }
     </script>
     <style>
-        /* Custom Animations */
+        /* Animações Personalizadas */
         .animate-on-scroll {
             opacity: 0;
             transform: translateY(30px);
@@ -51,7 +51,7 @@
         .delay-200 { transition-delay: 200ms; }
         .delay-300 { transition-delay: 300ms; }
 
-        /* Hero Overlay Gradient */
+        /* Gradiente de Sobreposição do Hero */
         .hero-gradient {
             background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3));
         }
@@ -59,63 +59,122 @@
 </head>
 <body class="font-sans text-gray-800 antialiased bg-gray-50 flex flex-col min-h-screen">
 
-    <!-- Top Bar -->
-    <div class="bg-primary text-white text-sm py-2 hidden md:block">
+    <!-- Barra Superior -->
+    <div class="bg-gray-100 py-3.5 hidden lg:block border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-            <div class="flex items-center space-x-6">
-                <span><i class="fa-regular fa-clock mr-2"></i> Mon 11-7pm | Tue-Thu 8-4pm | Fri 8-2pm</span>
-                <span><i class="fa-solid fa-location-dot mr-2"></i> 3508 Far West Blvd. Suite 310, Austin, TX</span>
+            
+            <!-- Open Hours -->
+            <div class="flex items-center group cursor-default">
+                <div class="w-11 h-11 rounded-full border-[2px] border-primary/40 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 mr-4 shadow-sm bg-white">
+                    <i class="fa-regular fa-clock text-xl"></i>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h4 class="font-extrabold text-gray-900 text-[13px] tracking-wider uppercase mb-0.5">Open Hours</h4>
+                    <p class="text-[14px] text-gray-600 font-medium">Mon. 11-7pm / Tue.-Thur. 8am-4pm / Fri. 8am-2pm</p>
+                </div>
             </div>
-            <div>
-                <a href="tel:512-346-5738" class="font-semibold hover:text-accent transition"><i class="fa-solid fa-phone mr-2"></i> (512) 346-5738</a>
+
+            <!-- Contact & Location -->
+            <div class="flex items-center group">
+                <div class="w-11 h-11 flex items-center justify-center text-primary/70 group-hover:text-primary transition-colors duration-300 mr-4 text-3xl">
+                    <i class="fa-solid fa-grip"></i>
+                </div>
+                <div class="flex flex-col justify-center text-right sm:text-left">
+                    <h4 class="font-extrabold text-gray-900 text-[13px] tracking-wider uppercase mb-0.5">
+                        Call Today <a href="tel:512-346-5738" class="text-primary hover:text-secondary transition-colors ml-1 text-[14px] underline decoration-primary/30 underline-offset-4 decoration-2">(512) 346-5738</a>
+                    </h4>
+                    <p class="text-[14px] text-gray-600 font-medium">3508 Far West Blvd. Suite 310, Austin, TX</p>
+                </div>
             </div>
+
         </div>
     </div>
 
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
+    <!-- Navegação -->
+    <nav class="bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 sticky top-0 z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20">
-                <div class="flex items-center">
-                    <a href="#" class="flex-shrink-0 flex items-center">
-                        <!-- Placeholder for Logo - Using Text for robustness -->
-                        <span class="text-2xl font-bold text-primary tracking-tight">Austin Family <span class="text-gray-800">Dentist</span></span>
+            <div class="flex justify-between items-center h-20 lg:h-24 gap-4 xl:gap-8">
+                <!-- Logo -->
+                <div class="flex items-center flex-shrink-0">
+                    <a href="#" class="flex items-center group">
+                        <img class="h-14 sm:h-16 lg:h-16 xl:h-20 w-auto max-w-[220px] md:max-w-[250px] lg:max-w-[280px] xl:max-w-none object-contain transition-transform duration-300 group-hover:scale-105" src="https://austinfamilydentist.com/wp-content/uploads/2020/04/logo1-1.png" alt="Austin Family Dentist Logo">
                     </a>
                 </div>
                 
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#" class="text-primary font-medium hover:text-secondary transition">Home</a>
-                    <a href="#about" class="text-gray-600 hover:text-primary transition">Our Dentists</a>
-                    <a href="#services" class="text-gray-600 hover:text-primary transition">Services</a>
-                    <a href="#contact" class="text-gray-600 hover:text-primary transition">Contact Us</a>
-                    <a href="tel:512-346-5738" class="bg-primary text-white px-6 py-2.5 rounded-full font-medium hover:bg-secondary hover:shadow-lg transition transform hover:-translate-y-0.5">Emergency Care</a>
+                <!-- Menu de Ecrã Inteiro (Desktop) -->
+                <div class="hidden lg:flex items-center justify-end flex-1 space-x-1 xl:space-x-3">
+                    <a href="#" class="group relative px-1.5 xl:px-3 py-2 text-primary font-semibold text-[11px] xl:text-[12px] tracking-wider uppercase hover:text-secondary transition-colors whitespace-nowrap">
+                        Home
+                        <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-1/2 group-hover:left-1/4 rounded-t-md"></span>
+                    </a>
+                    <a href="#about" class="group relative px-1.5 xl:px-3 py-2 text-primary font-semibold text-[11px] xl:text-[12px] tracking-wider uppercase hover:text-secondary transition-colors whitespace-nowrap">
+                        About Us
+                        <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-1/2 group-hover:left-1/4 rounded-t-md"></span>
+                    </a>
+                    <a href="#dentists" class="group relative px-1.5 xl:px-3 py-2 text-primary font-semibold text-[11px] xl:text-[12px] tracking-wider uppercase hover:text-secondary transition-colors whitespace-nowrap">
+                        Our Dentists
+                        <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-1/2 group-hover:left-1/4 rounded-t-md"></span>
+                    </a>
+                    <a href="#team" class="group relative px-1.5 xl:px-3 py-2 text-primary font-semibold text-[11px] xl:text-[12px] tracking-wider uppercase hover:text-secondary transition-colors whitespace-nowrap">
+                        Our Team
+                        <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-1/2 group-hover:left-1/4 rounded-t-md"></span>
+                    </a>
+                    <a href="#services" class="group relative px-1.5 xl:px-3 py-2 text-primary font-semibold text-[11px] xl:text-[12px] tracking-wider uppercase hover:text-secondary transition-colors whitespace-nowrap">
+                        Services
+                        <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-1/2 group-hover:left-1/4 rounded-t-md"></span>
+                    </a>
+                    <a href="#new-patients" class="group relative px-1.5 xl:px-3 py-2 text-primary font-semibold text-[11px] xl:text-[12px] tracking-wider uppercase hover:text-secondary transition-colors whitespace-nowrap">
+                        New Patients
+                        <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-1/2 group-hover:left-1/4 rounded-t-md"></span>
+                    </a>
+                    <a href="#faqs" class="group relative px-1.5 xl:px-3 py-2 text-primary font-semibold text-[11px] xl:text-[12px] tracking-wider uppercase hover:text-secondary transition-colors whitespace-nowrap">
+                        FAQ's
+                        <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-1/2 group-hover:left-1/4 rounded-t-md"></span>
+                    </a>
+                    <a href="#contact" class="group relative px-1.5 xl:px-3 py-2 text-primary font-semibold text-[11px] xl:text-[12px] tracking-wider uppercase hover:text-secondary transition-colors whitespace-nowrap">
+                        Contact Us
+                        <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-1/2 group-hover:left-1/4 rounded-t-md"></span>
+                    </a>
+                    <a href="#emergency" class="group relative px-1.5 xl:px-3 py-2 text-primary font-semibold text-[11px] xl:text-[12px] tracking-wider uppercase hover:text-red-600 transition-colors whitespace-nowrap">
+                        Emergency
+                        <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-red-600 transition-all duration-300 group-hover:w-1/2 group-hover:left-1/4 rounded-t-md"></span>
+                    </a>
                 </div>
 
-                <!-- Mobile menu button -->
-                <div class="flex items-center md:hidden">
-                    <button type="button" id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none p-2">
+                <!-- Botão de Menu Mobile -->
+                <div class="flex items-center lg:hidden">
+                    <button type="button" id="mobile-menu-btn" class="bg-primary/10 text-primary hover:bg-primary hover:text-white focus:outline-none p-2.5 rounded-lg transition-colors duration-300">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- Mobile Menu -->
-        <div class="md:hidden hidden bg-white border-t border-gray-100 absolute w-full shadow-lg" id="mobile-menu">
-            <div class="px-4 pt-2 pb-6 space-y-2">
-                <a href="#" class="block px-3 py-3 text-base font-medium text-primary bg-blue-50 rounded-md">Home</a>
-                <a href="#about" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Our Dentists</a>
-                <a href="#services" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Services</a>
-                <a href="#contact" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Contact Us</a>
-                <a href="tel:512-346-5738" class="block mt-4 text-center bg-primary text-white px-4 py-3 rounded-md font-medium">Call: (512) 346-5738</a>
+        <!-- Menu Mobile -->
+        <div class="lg:hidden hidden bg-white border-t border-gray-100 absolute w-full shadow-2xl" id="mobile-menu">
+            <div class="px-4 pt-4 pb-8 space-y-2">
+                <a href="#" class="block px-4 py-3 text-sm font-bold text-primary bg-accent/30 rounded-lg uppercase tracking-wide">Home</a>
+                <a href="#about" class="block px-4 py-3 text-sm font-semibold text-gray-600 hover:text-primary hover:bg-gray-50 rounded-lg uppercase tracking-wide transition-colors">About Us</a>
+                <a href="#dentists" class="block px-4 py-3 text-sm font-semibold text-gray-600 hover:text-primary hover:bg-gray-50 rounded-lg uppercase tracking-wide transition-colors">Our Dentists</a>
+                <a href="#team" class="block px-4 py-3 text-sm font-semibold text-gray-600 hover:text-primary hover:bg-gray-50 rounded-lg uppercase tracking-wide transition-colors">Our Team</a>
+                <a href="#services" class="block px-4 py-3 text-sm font-semibold text-gray-600 hover:text-primary hover:bg-gray-50 rounded-lg uppercase tracking-wide transition-colors">Services</a>
+                <a href="#new-patients" class="block px-4 py-3 text-sm font-semibold text-gray-600 hover:text-primary hover:bg-gray-50 rounded-lg uppercase tracking-wide transition-colors">New Patients</a>
+                <a href="#faqs" class="block px-4 py-3 text-sm font-semibold text-gray-600 hover:text-primary hover:bg-gray-50 rounded-lg uppercase tracking-wide transition-colors">FAQ's</a>
+                <a href="#contact" class="block px-4 py-3 text-sm font-semibold text-gray-600 hover:text-primary hover:bg-gray-50 rounded-lg uppercase tracking-wide transition-colors">Contact Us</a>
+                <a href="#emergency" class="block px-4 py-3 text-sm font-semibold text-red-600 hover:bg-red-50 rounded-lg uppercase tracking-wide transition-colors">Emergency</a>
+                
+                <div class="pt-4 mt-4 border-t border-gray-100">
+                    <a href="tel:512-346-5738" class="flex items-center justify-center bg-primary hover:bg-secondary text-white px-4 py-3.5 rounded-xl font-bold uppercase tracking-wide transition-colors shadow-md">
+                        <i class="fa-solid fa-phone mr-2"></i> (512) 346-5738
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Secção Principal (Hero) -->
     <div class="relative bg-gray-900 h-[600px] flex items-center">
-        <!-- Background Image -->
+        <!-- Imagem de Fundo -->
         <div class="absolute inset-0">
             <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Modern Dental Clinic">
             <div class="absolute inset-0 hero-gradient"></div>
@@ -144,67 +203,156 @@
         </div>
     </div>
 
-    <!-- Services Section -->
-    <section id="services" class="py-24 bg-white">
+    <!-- Secção de Serviços -->
+    <section id="services" class="py-24 bg-gray-50 border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
-                <h2 class="text-sm font-bold tracking-wide text-primary uppercase mb-2">Get Well Soon</h2>
-                <p class="text-3xl sm:text-4xl font-extrabold text-gray-900">Our Premium Services</p>
-                <div class="mt-4 w-24 h-1 bg-primary mx-auto rounded-full"></div>
+                <h2 class="text-sm font-bold tracking-wide text-primary uppercase mb-2">Comprehensive Care</h2>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Dental Services</h2>
+                <p class="text-lg text-gray-600 mt-4">We offer a variety of services to our patients with cutting-edge technology and maximum comfort.</p>
+                <div class="mt-6 w-24 h-1 bg-primary mx-auto rounded-full"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <!-- Service 1 -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-300 border border-gray-100 transform hover:-translate-y-2 animate-on-scroll delay-100 group">
-                    <div class="w-16 h-16 bg-accent rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition">
-                        <i class="fa-solid fa-tooth text-3xl text-primary group-hover:text-white transition"></i>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Serviço 1: Obturações Brancas -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 transform hover:-translate-y-1 animate-on-scroll group">
+                    <div class="w-14 h-14 bg-accent rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition">
+                        <i class="fa-solid fa-tooth text-2xl text-primary group-hover:text-white transition"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Dental Implants</h3>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        A state-of-the-art treatment for missing teeth. Permanent, comfortable, natural-looking, and easy to care for to maintain your oral health.
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">White Fillings</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Composite resin restorations that match the natural color of your teeth, eliminating the metallic look for a natural appearance and long-lasting durability.
                     </p>
-                    <a href="#" class="text-primary font-semibold flex items-center hover:text-secondary">
-                        Learn more <i class="fa-solid fa-arrow-right ml-2 text-sm transition transform group-hover:translate-x-1"></i>
-                    </a>
                 </div>
 
-                <!-- Service 2 -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-300 border border-gray-100 transform hover:-translate-y-2 animate-on-scroll delay-200 group">
-                    <div class="w-16 h-16 bg-accent rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition">
-                        <i class="fa-solid fa-staff-snake text-3xl text-primary group-hover:text-white transition"></i>
+                <!-- Serviço 2: Canal Radicular -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 transform hover:-translate-y-1 animate-on-scroll delay-100 group">
+                    <div class="w-14 h-14 bg-accent rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition">
+                        <i class="fa-solid fa-staff-snake text-2xl text-primary group-hover:text-white transition"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Root Canals</h3>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        When the dental pulp is damaged, we provide pain-free endodontic therapy to save your natural tooth and alleviate discomfort immediately.
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Root Canal Treatment</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Endodontic therapy using new rotary instrumentation for faster, safer, and more comfortable results, saving damaged teeth and relieving pain.
                     </p>
-                    <a href="#" class="text-primary font-semibold flex items-center hover:text-secondary">
-                        Learn more <i class="fa-solid fa-arrow-right ml-2 text-sm transition transform group-hover:translate-x-1"></i>
-                    </a>
                 </div>
 
-                <!-- Service 3 -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-300 border border-gray-100 transform hover:-translate-y-2 animate-on-scroll delay-300 group">
-                    <div class="w-16 h-16 bg-accent rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition">
-                        <i class="fa-solid fa-wand-magic-sparkles text-3xl text-primary group-hover:text-white transition"></i>
+                <!-- Serviço 3: Laços (Bonding) -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 transform hover:-translate-y-1 animate-on-scroll delay-200 group">
+                    <div class="w-14 h-14 bg-accent rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition">
+                        <i class="fa-solid fa-wand-magic-sparkles text-2xl text-primary group-hover:text-white transition"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">White Fillings</h3>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        Durable resin composite fillings that match your natural teeth, eliminating the "metal-mouth" look and restoring your beautiful smile.
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Dental Bonding</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Application of durable resin to close spaces, correct misaligned teeth, and mask unwanted stains quickly and affordably.
                     </p>
-                    <a href="#" class="text-primary font-semibold flex items-center hover:text-secondary">
-                        Learn more <i class="fa-solid fa-arrow-right ml-2 text-sm transition transform group-hover:translate-x-1"></i>
-                    </a>
+                </div>
+
+                <!-- Serviço 4: Facetas -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 transform hover:-translate-y-1 animate-on-scroll group">
+                    <div class="w-14 h-14 bg-accent rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition">
+                        <i class="fa-regular fa-face-smile text-2xl text-primary group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Porcelain Veneers</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Thin, durable shells that correct stained or damaged teeth. Translucent and stain-resistant for an incredibly natural and realistic smile.
+                    </p>
+                </div>
+
+                <!-- Serviço 5: Lumineers -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 transform hover:-translate-y-1 animate-on-scroll delay-100 group">
+                    <div class="w-14 h-14 bg-accent rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition">
+                        <i class="fa-regular fa-star text-2xl text-primary group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Lumineers</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Veneers as thin as contact lenses. A painless, permanent solution to whiten and perfectly align smiles with little to no tooth reduction.
+                    </p>
+                </div>
+
+                <!-- Serviço 6: Coroas -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 transform hover:-translate-y-1 animate-on-scroll delay-200 group">
+                    <div class="w-14 h-14 bg-accent rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition">
+                        <i class="fa-solid fa-crown text-2xl text-primary group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Dental Crowns</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Restore the structural integrity of damaged teeth, allowing normal function. Custom-made from metal, porcelain, or a combination of both.
+                    </p>
+                </div>
+
+                <!-- Serviço 7: Clareamento Consultório -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 transform hover:-translate-y-1 animate-on-scroll group">
+                    <div class="w-14 h-14 bg-accent rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition">
+                        <i class="fa-solid fa-bolt text-2xl text-primary group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">In-Office Whitening</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Treatment activated by the Rembrandt Sapphire light that can lighten your teeth an average of eight shades in just one hour. Safe, easy, and convenient.
+                    </p>
+                </div>
+
+                <!-- Serviço 8: Clareamento em Casa -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 transform hover:-translate-y-1 animate-on-scroll delay-100 group">
+                    <div class="w-14 h-14 bg-accent rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition">
+                        <i class="fa-solid fa-house-medical text-2xl text-primary group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">At-Home Whitening</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        For those who prefer flexibility and convenience, we offer a variety of at-home whitening products to achieve a sparkling smile on your own schedule.
+                    </p>
+                </div>
+
+                <!-- Serviço 9: Implantes -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 transform hover:-translate-y-1 animate-on-scroll delay-200 group">
+                    <div class="w-14 h-14 bg-accent rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition">
+                        <i class="fa-solid fa-screwdriver-wrench text-2xl text-primary group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Dental Implants</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        A state-of-the-art treatment for missing teeth. A permanent titanium root with a custom prosthetic crown that looks and functions like a natural tooth.
+                    </p>
+                </div>
+
+                <!-- Serviço 10: Pontes -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 transform hover:-translate-y-1 animate-on-scroll group">
+                    <div class="w-14 h-14 bg-accent rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition">
+                        <i class="fa-solid fa-bridge text-2xl text-primary group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Dental Bridges</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Fill the gaps left by missing teeth by anchoring to adjacent teeth. They prevent other teeth from drifting and maintain the health and beauty of your smile.
+                    </p>
+                </div>
+
+                <!-- Serviço 11: Próteses -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 transform hover:-translate-y-1 animate-on-scroll delay-100 group">
+                    <div class="w-14 h-14 bg-accent rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition">
+                        <i class="fa-solid fa-teeth-open text-2xl text-primary group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Partial / Full Dentures</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Replacement of all or a few missing teeth with removable prosthetics. Today's dentures are more lifelike than ever, restoring function and appearance.
+                    </p>
                 </div>
             </div>
+            
+            <!-- Call to action Serviços -->
+            <div class="mt-16 text-center animate-on-scroll">
+                <p class="text-gray-600 mb-6">Have questions about the ideal treatment for you?</p>
+                <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-semibold rounded-full text-white bg-primary hover:bg-secondary transition shadow-md">
+                    Schedule Your Consultation
+                </a>
+            </div>
+
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-24 bg-gray-50 overflow-hidden">
+    <!-- Secção Sobre (About) -->
+    <section id="about" class="py-24 bg-white overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row items-center gap-16">
                 <div class="w-full lg:w-1/2 animate-on-scroll relative">
-                    <!-- Decorative element -->
+                    <!-- Elemento decorativo -->
                     <div class="absolute -inset-4 bg-primary/20 rounded-3xl transform rotate-3 scale-105 blur-lg -z-10"></div>
                     <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dentist working" class="rounded-3xl shadow-2xl object-cover w-full h-[500px]">
                 </div>
@@ -222,14 +370,14 @@
                     </p>
                     
                     <div class="flex items-center gap-4">
-                        <a href="#" class="bg-gray-900 text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-800 transition shadow-md">
+                        <a href="#about" class="bg-gray-900 text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-800 transition shadow-md">
                             Read Our Story
                         </a>
                         <div class="flex items-center ml-4">
                             <div class="flex -space-x-2">
-                                <img class="w-10 h-10 rounded-full border-2 border-white" src="https://i.pravatar.cc/100?img=1" alt="Patient">
-                                <img class="w-10 h-10 rounded-full border-2 border-white" src="https://i.pravatar.cc/100?img=2" alt="Patient">
-                                <img class="w-10 h-10 rounded-full border-2 border-white" src="https://i.pravatar.cc/100?img=3" alt="Patient">
+                                <img class="w-10 h-10 rounded-full border-2 border-white object-cover" src="https://i.pravatar.cc/100?img=1" alt="Patient">
+                                <img class="w-10 h-10 rounded-full border-2 border-white object-cover" src="https://i.pravatar.cc/100?img=2" alt="Patient">
+                                <img class="w-10 h-10 rounded-full border-2 border-white object-cover" src="https://i.pravatar.cc/100?img=3" alt="Patient">
                             </div>
                             <span class="ml-4 text-sm font-medium text-gray-600">500+ Happy Patients</span>
                         </div>
@@ -239,56 +387,175 @@
         </div>
     </section>
 
-    <!-- Team Section -->
-    <section class="py-24 bg-white">
+    <!-- Secção de Dentistas (Our Dentists) -->
+    <section id="dentists" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Meet Our Expert Dentists</h2>
+            <div class="text-center max-w-3xl mx-auto mb-20 animate-on-scroll">
+                <h2 class="text-sm font-bold tracking-wide text-primary uppercase mb-2">Our Expertise</h2>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Our Dentists</h2>
                 <div class="mt-4 w-24 h-1 bg-primary mx-auto rounded-full"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <!-- Team Member 1 -->
-                <div class="text-center animate-on-scroll delay-100 group">
-                    <div class="relative w-64 h-64 mx-auto mb-6 rounded-full overflow-hidden shadow-xl border-4 border-white group-hover:border-accent transition duration-300">
-                        <!-- Placeholder photo -->
-                        <img src="https://placehold.co/400x400/e2e8f0/94a3b8?text=Preview" alt="Dr. Brian D Tucker" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+            <!-- Lista de Dentistas (Layout Alternado Padrão Z) -->
+            <div class="space-y-24 mb-16">
+                <!-- Dr. Brian Tucker -->
+                <div class="flex flex-col lg:flex-row items-center gap-12 animate-on-scroll">
+                    <div class="w-full lg:w-2/5 relative group">
+                        <div class="absolute inset-0 bg-primary/20 rounded-3xl transform -rotate-3 scale-105 transition duration-500 group-hover:rotate-0 -z-10"></div>
+                        <img src="https://austinfamilydentist.com/wp-content/uploads/2025/08/BrianTucker.webp" alt="Dr. Brian Tucker" class="rounded-3xl shadow-xl w-full object-cover aspect-[4/5]">
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900">Dr. Brian D Tucker</h3>
-                    <p class="text-primary font-medium mb-4">Lead Dentist & Owner</p>
-                    <p class="text-gray-600 px-4">Born and raised in New Jersey, Dr. Tucker brings years of expertise and a passion for creating perfect smiles.</p>
+                    <div class="w-full lg:w-3/5 space-y-4">
+                        <h3 class="text-3xl font-bold text-gray-900 uppercase">Brian D. Tucker, DMD, FAGD</h3>
+                        <p class="text-primary font-semibold text-lg uppercase tracking-wide">Lead Dentist & Owner</p>
+                        <div class="text-gray-600 leading-relaxed space-y-4">
+                            <p>Dr. Brian D. Tucker was born and raised in Cinnaminson, New Jersey. He received his Bachelor of Science in Biology at The College of New Jersey. He continued his studies at the University of Medicine and Dentistry of New Jersey, where he earned his dental degree. He was selected for the prestigious Omicron Kappa Upsilon (OKU) Alumni Association.</p>
+                            <p>During his residency in Las Vegas, Dr. Tucker gained valuable clinical experience in all aspects of dentistry, including implants, IV sedation, cosmetic dentistry, and complex extractions. He moved to Austin in 2006.</p>
+                            <p>Dr. Tucker achieved the coveted Fellowship of the Academy of General Dentistry (FAGD) title in 2009, a distinction earned by only 6% of dentists in the US and Canada, reinforcing his ongoing commitment to excellence.</p>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Team Member 2 -->
-                <div class="text-center animate-on-scroll delay-200 group">
-                    <div class="relative w-64 h-64 mx-auto mb-6 rounded-full overflow-hidden shadow-xl border-4 border-white group-hover:border-accent transition duration-300">
-                        <img src="https://placehold.co/400x400/e2e8f0/94a3b8?text=Preview" alt="Dr. Sara Kieschnick" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                <!-- Dra. Sara Kieschnick -->
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-12 animate-on-scroll delay-100">
+                    <div class="w-full lg:w-2/5 relative group">
+                        <div class="absolute inset-0 bg-accent rounded-3xl transform rotate-3 scale-105 transition duration-500 group-hover:rotate-0 -z-10"></div>
+                        <img src="https://austinfamilydentist.com/wp-content/uploads/2025/08/SaraKieschnick.webp" alt="Dra. Sara Kieschnick" class="rounded-3xl shadow-xl w-full object-cover aspect-[4/5]">
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900">Dr. Sara Kieschnick</h3>
-                    <p class="text-primary font-medium mb-4">Dentist</p>
-                    <p class="text-gray-600 px-4">Raised in Texas, she earned her BA graduating summa cum laude and focuses on gentle, compassionate care.</p>
+                    <div class="w-full lg:w-3/5 space-y-4">
+                        <h3 class="text-3xl font-bold text-gray-900 uppercase">Sara Kieschnick, DDS</h3>
+                        <p class="text-primary font-semibold text-lg uppercase tracking-wide">Dentist</p>
+                        <div class="text-gray-600 leading-relaxed space-y-4">
+                            <p>Dr. Sara Kieschnick was born in Winnipeg, Manitoba, and grew up in Fairfax, Virginia, and Plano, Texas. She earned her bachelor's degree, graduating summa cum laude, from Austin College. She completed her Doctor of Dental Surgery (DDS) at the Texas A&M Baylor College of Dentistry in 2016.</p>
+                            <p>After graduation, she completed a general practice residency in Albuquerque, New Mexico. Dr. Kieschnick regularly participates in continuing education programs, attending conferences and study groups to stay up-to-date with the latest techniques.</p>
+                            <p>When not working, she enjoys spending time with her husband and young daughter, reading her favorite library books, and hanging out with friends.</p>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Team Member 3 -->
-                <div class="text-center animate-on-scroll delay-300 group">
-                    <div class="relative w-64 h-64 mx-auto mb-6 rounded-full overflow-hidden shadow-xl border-4 border-white group-hover:border-accent transition duration-300">
-                        <img src="https://placehold.co/400x400/e2e8f0/94a3b8?text=Preview" alt="Dr. Priscilla Wong" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                <!-- Dra. Priscilla Wong -->
+                <div class="flex flex-col lg:flex-row items-center gap-12 animate-on-scroll delay-200">
+                    <div class="w-full lg:w-2/5 relative group">
+                        <div class="absolute inset-0 bg-blue-100 rounded-3xl transform -rotate-3 scale-105 transition duration-500 group-hover:rotate-0 -z-10"></div>
+                        <img src="https://austinfamilydentist.com/wp-content/uploads/2025/08/PriscillaWong.webp" alt="Dra. Priscilla Wong" class="rounded-3xl shadow-xl w-full object-cover aspect-[4/5]">
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900">Dr. Priscilla Wong</h3>
-                    <p class="text-primary font-medium mb-4">Dentist</p>
-                    <p class="text-gray-600 px-4">Relocated to Austin from Canada, she loves the outdoors and bringing confident smiles to her patients.</p>
+                    <div class="w-full lg:w-3/5 space-y-4">
+                        <h3 class="text-3xl font-bold text-gray-900 uppercase">Priscilla Wong, DDS</h3>
+                        <p class="text-primary font-semibold text-lg uppercase tracking-wide">Dentist</p>
+                        <div class="text-gray-600 leading-relaxed space-y-4">
+                            <p>Dr. Priscilla Wong was born near the Canadian Rockies in Calgary, Alberta. Her family moved to Austin, Texas, in 2001, and she has been a Texan at heart ever since.</p>
+                            <p>She graduated in Chemical Engineering from the University of Texas at Austin and completed her Doctor of Dental Surgery at the University of Texas Health Houston School of Dentistry.</p>
+                            <p>In her free time, she explores Austin's food scene with her husband, enjoys the outdoors, and is an excellent baker (specializing in brown butter chocolate chip cookies). She speaks fluent Cantonese and is currently learning Mandarin.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="mt-16 text-center animate-on-scroll delay-300">
-                <a href="#" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full text-primary bg-accent hover:bg-blue-100 transition">
-                    View Entire Team
-                </a>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Secção de Equipa (Our Team) -->
+    <section id="team" class="py-24 bg-gray-50 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+                <h2 class="text-sm font-bold tracking-wide text-primary uppercase mb-2">Meet</h2>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Our Amazing Team</h2>
+                <div class="mt-4 w-24 h-1 bg-primary mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Grelha da Equipa -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Membro 1 -->
+                <div class="bg-white rounded-2xl p-6 text-center shadow-md hover:shadow-xl transition duration-300 border border-gray-100 animate-on-scroll">
+                    <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-gray-50 shadow-lg">
+                        <img src="https://austinfamilydentist.com/wp-content/uploads/2025/08/Liz.webp" alt="Liz" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-1">Liz</h4>
+                    <p class="text-sm text-gray-600">Graduated from the Univ. of Minnesota. Loves traveling, design, and keeping up with her three daughters.</p>
+                </div>
+
+                <!-- Membro 2 -->
+                <div class="bg-white rounded-2xl p-6 text-center shadow-md hover:shadow-xl transition duration-300 border border-gray-100 animate-on-scroll delay-100">
+                    <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-gray-50 shadow-lg">
+                        <img src="https://austinfamilydentist.com/wp-content/uploads/2025/08/Sierra.webp" alt="Sierra" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-1">Sierra</h4>
+                    <p class="text-sm text-gray-600">Brings over a decade of experience. Ensures every patient leaves feeling empowered and confident.</p>
+                </div>
+
+                <!-- Membro 3 -->
+                <div class="bg-white rounded-2xl p-6 text-center shadow-md hover:shadow-xl transition duration-300 border border-gray-100 animate-on-scroll delay-200">
+                    <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-gray-50 shadow-lg">
+                        <img src="https://austinfamilydentist.com/wp-content/uploads/2025/08/Rob.webp" alt="Robert" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-1">Robert</h4>
+                    <p class="text-sm text-gray-600">Avid runner and outdoor enthusiast. Has worked in the dental field since 2006, always eager to help patients.</p>
+                </div>
+
+                <!-- Membro 4 -->
+                <div class="bg-white rounded-2xl p-6 text-center shadow-md hover:shadow-xl transition duration-300 border border-gray-100 animate-on-scroll delay-300">
+                    <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-gray-50 shadow-lg">
+                        <img src="https://austinfamilydentist.com/wp-content/uploads/2025/08/Jill.webp" alt="Jill" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-1">Jill</h4>
+                    <p class="text-sm text-gray-600">Registered Assistant since 2006. Loves getting to know patients personally and making the experience a breeze.</p>
+                </div>
+
+                <!-- Membro 5 -->
+                <div class="bg-white rounded-2xl p-6 text-center shadow-md hover:shadow-xl transition duration-300 border border-gray-100 animate-on-scroll">
+                    <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-gray-50 shadow-lg">
+                        <img src="https://austinfamilydentist.com/wp-content/uploads/2025/08/Jenn.webp" alt="Jennifer" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-1">Jennifer</h4>
+                    <p class="text-sm text-gray-600">Over 15 years in the field. Knows all the front desk answers and loves traveling to create memories.</p>
+                </div>
+
+                <!-- Membro 6 -->
+                <div class="bg-white rounded-2xl p-6 text-center shadow-md hover:shadow-xl transition duration-300 border border-gray-100 animate-on-scroll delay-100">
+                    <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-gray-50 shadow-lg">
+                        <img src="https://austinfamilydentist.com/wp-content/uploads/2020/04/staff-ying.jpg" alt="Ying" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-1">Ying</h4>
+                    <p class="text-sm text-gray-600">Fluent in Chinese and English. Detail-oriented, she strives to make every visit welcoming and pleasant.</p>
+                </div>
+
+                <!-- Membro 7 -->
+                <div class="bg-white rounded-2xl p-6 text-center shadow-md hover:shadow-xl transition duration-300 border border-gray-100 animate-on-scroll delay-200">
+                    <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-gray-50 shadow-lg">
+                        <img src="https://austinfamilydentist.com/wp-content/uploads/2025/08/Deb.webp" alt="Debbie" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-1">Debbie</h4>
+                    <p class="text-sm text-gray-600">In the field since 1986. Animal lover and world traveler, having participated in numerous dental missions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Novos Pacientes e FAQs / Placeholder das Secções Mencionadas no Menu -->
+    <section id="new-patients" class="py-24 bg-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6">New Patients Welcome</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">We are always accepting new patients! Get all the forms and information you need before your first visit.</p>
+            <a href="#contact" class="bg-primary hover:bg-secondary text-white px-8 py-4 rounded-full font-semibold transition shadow-md">Schedule First Visit</a>
+        </div>
+    </section>
+
+    <section id="faqs" class="py-24 bg-gray-50 border-t border-gray-200">
+    <section id="faqs" class="py-24 bg-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6">Frequently Asked Questions</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">Have questions about our treatments, insurance, or recovery times? Check out our FAQ section to learn more.</p>
+            <a href="#contact" class="bg-accent hover:bg-blue-200 text-primary px-8 py-4 rounded-full font-semibold transition shadow-md">Read FAQs</a>
+        </div>
+    </section>
+    
+    <section id="emergency" class="py-24 bg-red-50 border-t border-red-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-red-600 mb-6">Dental Emergency?</h2>
+            <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-8">Don't wait in pain. We offer prompt emergency dental care. Call us immediately during business hours.</p>
+            <a href="tel:512-346-5738" class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full font-semibold transition shadow-md"><i class="fa-solid fa-phone mr-2"></i> Call Now</a>
+        </div>
+    </section>
+
+    <!-- Secção de Contacto (Contact) -->
     <section id="contact" class="py-24 bg-gray-900 text-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 animate-on-scroll">
@@ -297,7 +564,7 @@
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- Contact Info -->
+                <!-- Informações de Contacto -->
                 <div class="space-y-8 animate-on-scroll">
                     <div class="bg-gray-800 p-8 rounded-2xl flex items-start space-x-6 hover:bg-gray-750 transition">
                         <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
@@ -332,7 +599,7 @@
                     </div>
                 </div>
 
-                <!-- Map -->
+                <!-- Mapa -->
                 <div class="h-full min-h-[400px] rounded-2xl overflow-hidden shadow-2xl animate-on-scroll delay-200">
                     <iframe 
                         src="https://www.google.com/maps/embed/v1/place?q=Austin+Family+Dentist+3508+Far+W+Blvd+%23310%2C+Austin%2C+TX+78731&key=AIzaSyD09zQ9PNDNNy9TadMuzRV_UsPUoWKntt8" 
@@ -346,7 +613,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Rodapé -->
     <footer class="bg-gray-950 text-gray-400 py-12 mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="text-center md:text-left">
@@ -362,10 +629,10 @@
         </div>
     </footer>
 
-    <!-- Scripts for interactivity and animations -->
+    <!-- Scripts para interatividade e animações -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Mobile Menu Toggle
+            // Alternar Menu Mobile
             const btn = document.getElementById('mobile-menu-btn');
             const menu = document.getElementById('mobile-menu');
             const icon = btn.querySelector('i');
@@ -381,7 +648,7 @@
                 }
             });
 
-            // Smooth scrolling for anchor links
+            // Scrolling suave para links âncora
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     const targetId = this.getAttribute('href');
@@ -390,7 +657,7 @@
                     const targetElement = document.querySelector(targetId);
                     if(targetElement) {
                         e.preventDefault();
-                        // Close mobile menu if open
+                        // Fechar o menu mobile se estiver aberto
                         menu.classList.add('hidden');
                         icon.classList.remove('fa-xmark');
                         icon.classList.add('fa-bars');
@@ -402,7 +669,7 @@
                 });
             });
 
-            // Intersection Observer for scroll animations
+            // Intersection Observer para animações de scroll
             const observerOptions = {
                 root: null,
                 rootMargin: '0px',
@@ -413,7 +680,7 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('is-visible');
-                        observer.unobserve(entry.target); // Only animate once
+                        observer.unobserve(entry.target); // Anima apenas uma vez
                     }
                 });
             }, observerOptions);
