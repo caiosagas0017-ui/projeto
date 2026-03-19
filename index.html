@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fika Coffee House | Parker, Colorado</title>
     
-    <!-- Importando a fonte moderna do Google Fonts -->
+    <!-- Importing modern Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     
-    <!-- Importando o Tailwind CSS para estilização rápida -->
+    <!-- Importing Tailwind CSS for rapid styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Configuração personalizada do Tailwind para as nossas cores e fontes -->
+    <!-- Custom Tailwind configuration for our colors and fonts -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         coffee: {
-                            light: '#E6DCC8', // Cor de creme/leite
-                            medium: '#C4A484', // Cor de caramelo/madeira clara
-                            dark: '#4A3B32',   // Cor de grão de café torrado
-                            accent: '#D38C44'  // Laranja acastanhado para botões
+                            light: '#E6DCC8', // Cream/milk color
+                            medium: '#C4A484', // Caramel/light wood color
+                            dark: '#4A3B32',   // Roasted coffee bean color
+                            accent: '#D38C44'  // Brownish-orange for buttons
                         }
                     },
                     fontFamily: {
@@ -46,115 +46,115 @@
 </head>
 <body class="bg-stone-50 text-stone-800 font-sans antialiased">
 
-    <!-- CABEÇALHO / NAVEGAÇÃO -->
-    <!-- fixed, w-full, z-50 garantem que o menu fica sempre no topo por cima de tudo -->
+    <!-- HEADER / NAVIGATION -->
+    <!-- fixed, w-full, z-50 ensure the menu is always on top -->
     <header class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Logotipo -->
+                <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="#" class="font-serif font-bold text-3xl text-coffee-dark tracking-tighter">
                         FIKA<span class="text-coffee-accent">.</span>
                     </a>
                 </div>
-                <!-- Links de Navegação (Ocultos em telas muito pequenas) -->
+                <!-- Navigation Links (Hidden on very small screens) -->
                 <nav class="hidden md:flex space-x-8">
-                    <a href="#inicio" class="text-stone-600 hover:text-coffee-accent font-medium transition-colors">Início</a>
-                    <a href="#sobre" class="text-stone-600 hover:text-coffee-accent font-medium transition-colors">A Cultura Fika</a>
-                    <a href="#menu" class="text-stone-600 hover:text-coffee-accent font-medium transition-colors">Destaques</a>
-                    <a href="#visite" class="text-stone-600 hover:text-coffee-accent font-medium transition-colors">Visite-nos</a>
+                    <a href="#home" class="text-stone-600 hover:text-coffee-accent font-medium transition-colors">Home</a>
+                    <a href="#about" class="text-stone-600 hover:text-coffee-accent font-medium transition-colors">The Fika Culture</a>
+                    <a href="#menu" class="text-stone-600 hover:text-coffee-accent font-medium transition-colors">Highlights</a>
+                    <a href="#visit" class="text-stone-600 hover:text-coffee-accent font-medium transition-colors">Visit Us</a>
                 </nav>
-                <!-- Botão Call to Action -->
+                <!-- Call to Action Button -->
                 <div class="hidden md:flex items-center">
                     <a href="#menu" class="bg-coffee-dark text-white px-6 py-2 rounded-full font-medium hover:bg-coffee-accent transition-colors duration-300 shadow-md">
-                        Ver Menu
+                        View Menu
                     </a>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- SEÇÃO HERO (DESTAQUE PRINCIPAL) -->
-    <!-- h-screen faz com que ocupe 100% da altura da tela -->
-    <section id="inicio" class="relative h-screen flex items-center justify-center">
-        <!-- Imagem de Fundo com overlay escuro para o texto ficar legível -->
+    <!-- HERO SECTION (MAIN HIGHLIGHT) -->
+    <!-- h-screen makes it take up 100% of the screen height -->
+    <section id="home" class="relative h-screen flex items-center justify-center">
+        <!-- Background Image with dark overlay for readable text -->
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Café fresco sendo preparado" class="w-full h-full object-cover" />
+            <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Fresh coffee being prepared" class="w-full h-full object-cover" />
             <div class="absolute inset-0 bg-stone-900/60"></div>
         </div>
         
-        <!-- Conteúdo do Hero -->
+        <!-- Hero Content -->
         <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
             <span class="text-coffee-light uppercase tracking-[0.3em] font-semibold text-sm sm:text-base mb-4 block">Parker, Colorado</span>
             <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl text-white font-bold mb-6 drop-shadow-lg leading-tight">
-                Faça uma pausa. <br> Tenha um Fika.
+                Take a break. <br> Have a Fika.
             </h1>
             <p class="text-lg md:text-xl text-stone-200 mb-10 max-w-2xl mx-auto font-light">
-                Mais do que um café, um momento para desacelerar, apreciar as pequenas coisas e partilhar com quem mais gosta.
+                More than just coffee, a moment to slow down, appreciate the little things, and share with those you love.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="#menu" class="bg-coffee-accent text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-white hover:text-coffee-dark transition-all duration-300 shadow-lg">
-                    Descubra o Menu
+                    Discover the Menu
                 </a>
-                <a href="#visite" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-white hover:text-coffee-dark transition-all duration-300">
-                    Onde Estamos
+                <a href="#visit" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-white hover:text-coffee-dark transition-all duration-300">
+                    Where to Find Us
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO SOBRE -->
-    <section id="sobre" class="py-24 bg-white">
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <!-- Imagem -->
+                <!-- Image -->
                 <div class="relative group">
-                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Ambiente acolhedor da cafeteria" class="rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]" />
-                    <!-- Elemento decorativo -->
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Cozy coffee shop environment" class="rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]" />
+                    <!-- Decorative element -->
                     <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-coffee-light rounded-full -z-10"></div>
                     <div class="absolute -top-6 -left-6 w-24 h-24 bg-coffee-accent/20 rounded-full -z-10"></div>
                 </div>
                 
-                <!-- Texto -->
+                <!-- Text -->
                 <div>
-                    <h2 class="font-serif text-4xl md:text-5xl text-coffee-dark font-bold mb-6">O que é Fika?</h2>
+                    <h2 class="font-serif text-4xl md:text-5xl text-coffee-dark font-bold mb-6">What is Fika?</h2>
                     <p class="text-stone-600 text-lg mb-6 leading-relaxed">
-                        Na cultura sueca, "Fika" é muito mais do que apenas tomar um café. É um estado de espírito, uma atitude e uma parte importante da cultura. Significa arranjar tempo para os amigos e colegas para partilhar uma chávena de café (ou chá) e algo doce para comer.
+                        In Swedish culture, "Fika" is much more than just having a coffee. It is a state of mind, an attitude, and an important part of the culture. It means making time for friends and colleagues to share a cup of coffee (or tea) and something sweet to eat.
                     </p>
                     <p class="text-stone-600 text-lg mb-8 leading-relaxed">
-                        Localizada no coração de Parker, Colorado, a Fika Coffee House traz essa tradição acolhedora para a nossa comunidade. Torramos os nossos grãos artesanalmente e preparamos cada bebida com paixão.
+                        Located in the heart of Parker, Colorado, Fika Coffee House brings this welcoming tradition to our community. We hand-roast our beans and prepare every drink with passion.
                     </p>
                     <div class="flex items-center gap-4">
                         <div class="w-12 h-1 bg-coffee-accent"></div>
-                        <span class="text-coffee-dark font-serif font-bold text-xl italic">Venha partilhar este momento connosco.</span>
+                        <span class="text-coffee-dark font-serif font-bold text-xl italic">Come share this moment with us.</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO DE MENU INTERATIVO -->
+    <!-- INTERACTIVE MENU SECTION -->
     <section id="menu" class="py-24 bg-stone-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-coffee-accent uppercase tracking-widest font-semibold text-sm mb-2 block">O Nosso Menu</span>
-                <h2 class="font-serif text-4xl md:text-5xl text-coffee-dark font-bold mb-4">Escolha a sua Bebida</h2>
-                <p class="text-stone-600 text-lg">Explore as nossas opções e descubra o seu novo favorito.</p>
+                <span class="text-coffee-accent uppercase tracking-widest font-semibold text-sm mb-2 block">Our Menu</span>
+                <h2 class="font-serif text-4xl md:text-5xl text-coffee-dark font-bold mb-4">Choose Your Drink</h2>
+                <p class="text-stone-600 text-lg">Explore our options and discover your new favorite.</p>
             </div>
 
-            <!-- Tabs de Navegação -->
+            <!-- Navigation Tabs -->
             <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-12">
-                <button onclick="mudarAba('quente-gelado')" id="btn-quente-gelado" class="aba-btn px-6 py-2 rounded-full font-medium transition-all duration-300 bg-coffee-dark text-white shadow-md">Quente / Gelado</button>
-                <button onclick="mudarAba('misturados')" id="btn-misturados" class="aba-btn px-6 py-2 rounded-full font-medium transition-all duration-300 bg-white text-stone-600 hover:bg-coffee-light/50 shadow-sm border border-stone-200">Misturados</button>
-                <button onclick="mudarAba('cafe-expresso')" id="btn-cafe-expresso" class="aba-btn px-6 py-2 rounded-full font-medium transition-all duration-300 bg-white text-stone-600 hover:bg-coffee-light/50 shadow-sm border border-stone-200">Café & Expresso</button>
-                <button onclick="mudarAba('comida-cha')" id="btn-comida-cha" class="aba-btn px-6 py-2 rounded-full font-medium transition-all duration-300 bg-white text-stone-600 hover:bg-coffee-light/50 shadow-sm border border-stone-200">Comida & Chá</button>
+                <button onclick="changeTab('hot-iced')" id="btn-hot-iced" class="tab-btn px-6 py-2 rounded-full font-medium transition-all duration-300 bg-coffee-dark text-white shadow-md">Hot / Iced</button>
+                <button onclick="changeTab('blended')" id="btn-blended" class="tab-btn px-6 py-2 rounded-full font-medium transition-all duration-300 bg-white text-stone-600 hover:bg-coffee-light/50 shadow-sm border border-stone-200">Blended</button>
+                <button onclick="changeTab('coffee-espresso')" id="btn-coffee-espresso" class="tab-btn px-6 py-2 rounded-full font-medium transition-all duration-300 bg-white text-stone-600 hover:bg-coffee-light/50 shadow-sm border border-stone-200">Coffee & Espresso</button>
+                <button onclick="changeTab('food-tea')" id="btn-food-tea" class="tab-btn px-6 py-2 rounded-full font-medium transition-all duration-300 bg-white text-stone-600 hover:bg-coffee-light/50 shadow-sm border border-stone-200">Food & Tea</button>
             </div>
 
-            <!-- Conteúdo das Tabs -->
+            <!-- Tabs Content -->
             <div class="bg-white rounded-3xl shadow-xl p-6 sm:p-10 min-h-[400px]">
                 
-                <!-- Tab: Quente / Gelado -->
-                <div id="tab-quente-gelado" class="aba-conteudo block animate-fadeIn">
+                <!-- Tab: Hot / Iced -->
+                <div id="tab-hot-iced" class="tab-content block animate-fadeIn">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
                         <!-- Item -->
                         <div class="group flex justify-between items-center border-b border-stone-100 pb-3 pt-3 hover:bg-stone-50 px-3 rounded-lg transition-colors cursor-pointer">
@@ -219,10 +219,10 @@
                     </div>
                 </div>
 
-                <!-- Tab: Misturados -->
-                <div id="tab-misturados" class="aba-conteudo hidden animate-fadeIn">
+                <!-- Tab: Blended -->
+                <div id="tab-blended" class="tab-content hidden animate-fadeIn">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
-                        <!-- Categoria Frappe -->
+                        <!-- Frappe Category -->
                         <div class="md:col-span-2 mt-2 mb-2">
                             <h4 class="font-bold text-stone-400 uppercase tracking-widest text-sm border-b border-stone-200 pb-1">Frappes</h4>
                         </div>
@@ -257,14 +257,14 @@
                             </div>
                         </div>
 
-                        <!-- Categoria Smoothies -->
+                        <!-- Smoothies Category -->
                         <div class="md:col-span-2 mt-6 mb-2">
                             <h4 class="font-bold text-stone-400 uppercase tracking-widest text-sm border-b border-stone-200 pb-1">Smoothies</h4>
                         </div>
                         <!-- Item -->
                         <div class="group flex justify-between items-center border-b border-stone-100 pb-3 pt-3 hover:bg-stone-50 px-3 rounded-lg transition-colors cursor-pointer">
                             <div>
-                                <h3 class="font-serif text-xl font-bold text-coffee-dark group-hover:text-coffee-accent transition-colors">Morango (Strawberry)</h3>
+                                <h3 class="font-serif text-xl font-bold text-coffee-dark group-hover:text-coffee-accent transition-colors">Strawberry</h3>
                             </div>
                             <div class="text-right">
                                 <span class="text-xs text-stone-400 block uppercase tracking-wider">16oz / 20oz</span>
@@ -274,7 +274,7 @@
                         <!-- Item -->
                         <div class="group flex justify-between items-center border-b border-stone-100 pb-3 pt-3 hover:bg-stone-50 px-3 rounded-lg transition-colors cursor-pointer">
                             <div>
-                                <h3 class="font-serif text-xl font-bold text-coffee-dark group-hover:text-coffee-accent transition-colors">Manga (Mango)</h3>
+                                <h3 class="font-serif text-xl font-bold text-coffee-dark group-hover:text-coffee-accent transition-colors">Mango</h3>
                             </div>
                             <div class="text-right">
                                 <span class="text-xs text-stone-400 block uppercase tracking-wider">16oz / 20oz</span>
@@ -284,7 +284,7 @@
                         <!-- Item -->
                         <div class="group flex justify-between items-center pb-3 pt-3 hover:bg-stone-50 px-3 rounded-lg transition-colors cursor-pointer">
                             <div>
-                                <h3 class="font-serif text-xl font-bold text-coffee-dark group-hover:text-coffee-accent transition-colors">Frutos Silvestres (Wildberry)</h3>
+                                <h3 class="font-serif text-xl font-bold text-coffee-dark group-hover:text-coffee-accent transition-colors">Wildberry</h3>
                             </div>
                             <div class="text-right">
                                 <span class="text-xs text-stone-400 block uppercase tracking-wider">16oz / 20oz</span>
@@ -294,8 +294,8 @@
                     </div>
                 </div>
 
-                <!-- Tab: Café & Expresso -->
-                <div id="tab-cafe-expresso" class="aba-conteudo hidden animate-fadeIn">
+                <!-- Tab: Coffee & Espresso -->
+                <div id="tab-coffee-espresso" class="tab-content hidden animate-fadeIn">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
                         <!-- Item -->
                         <div class="group flex justify-between items-center border-b border-stone-100 pb-3 pt-3 hover:bg-stone-50 px-3 rounded-lg transition-colors cursor-pointer">
@@ -380,12 +380,12 @@
                     </div>
                 </div>
 
-                <!-- Tab: Comida & Chá -->
-                <div id="tab-comida-cha" class="aba-conteudo hidden animate-fadeIn">
+                <!-- Tab: Food & Tea -->
+                <div id="tab-food-tea" class="tab-content hidden animate-fadeIn">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
-                        <!-- Categoria Chá -->
+                        <!-- Tea Category -->
                         <div class="md:col-span-2 mt-2 mb-2">
-                            <h4 class="font-bold text-stone-400 uppercase tracking-widest text-sm border-b border-stone-200 pb-1">Chás</h4>
+                            <h4 class="font-bold text-stone-400 uppercase tracking-widest text-sm border-b border-stone-200 pb-1">Teas</h4>
                         </div>
                         <!-- Item -->
                         <div class="group flex justify-between items-center border-b border-stone-100 pb-3 pt-3 hover:bg-stone-50 px-3 rounded-lg transition-colors cursor-pointer">
@@ -408,9 +408,9 @@
                             </div>
                         </div>
 
-                        <!-- Categoria Comida -->
+                        <!-- Food Category -->
                         <div class="md:col-span-2 mt-6 mb-2">
-                            <h4 class="font-bold text-stone-400 uppercase tracking-widest text-sm border-b border-stone-200 pb-1">Comida</h4>
+                            <h4 class="font-bold text-stone-400 uppercase tracking-widest text-sm border-b border-stone-200 pb-1">Food</h4>
                         </div>
                         <!-- Item -->
                         <div class="group flex justify-between items-center border-b border-stone-100 pb-3 pt-3 hover:bg-stone-50 px-3 rounded-lg transition-colors cursor-pointer">
@@ -436,7 +436,7 @@
                                 <h3 class="font-serif text-xl font-bold text-coffee-dark group-hover:text-coffee-accent transition-colors">Assorted Pastries</h3>
                             </div>
                             <div class="text-right">
-                                <span class="font-bold text-stone-500 text-sm italic">Ver na vitrine</span>
+                                <span class="font-bold text-stone-500 text-sm italic">See display case</span>
                             </div>
                         </div>
                         <!-- Item -->
@@ -455,49 +455,49 @@
         </div>
     </section>
 
-    <!-- SEÇÃO VISITE-NOS (RODAPÉ INFORMATIVO COM MAPA) -->
-    <section id="visite" class="bg-coffee-dark text-stone-300 py-20 border-b border-white/10">
+    <!-- VISIT US SECTION (INFORMATIVE FOOTER WITH MAP) -->
+    <section id="visit" class="bg-coffee-dark text-stone-300 py-20 border-b border-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
                 
-                <!-- Informações (Esquerda) -->
+                <!-- Information (Left) -->
                 <div class="lg:col-span-5 flex flex-col justify-between space-y-10 py-2">
-                    <!-- Sobre / Logo -->
+                    <!-- About / Logo -->
                     <div>
                         <a href="#" class="font-serif font-bold text-3xl text-white tracking-tighter block mb-4">
                             FIKA<span class="text-coffee-accent">.</span>
                         </a>
                         <p class="text-stone-400 max-w-sm">
-                            A sua casa longe de casa em Parker, Colorado. Junte-se a nós para um café excecional e uma ótima companhia.
+                            Your home away from home in Parker, Colorado. Join us for exceptional coffee and great company.
                         </p>
                     </div>
 
-                    <!-- Horários -->
+                    <!-- Hours -->
                     <div>
-                        <h4 class="text-white font-serif text-xl font-bold mb-4">Horário de Funcionamento</h4>
+                        <h4 class="text-white font-serif text-xl font-bold mb-4">Hours of Operation</h4>
                         <ul class="space-y-2 text-stone-400 max-w-sm">
                             <li class="flex justify-between border-b border-white/10 pb-1">
-                                <span>Segunda - Sexta</span>
-                                <span class="text-white">6:00 - 18:00</span>
+                                <span>Monday - Friday</span>
+                                <span class="text-white">6:00 AM - 6:00 PM</span>
                             </li>
                             <li class="flex justify-between border-b border-white/10 pb-1">
-                                <span>Sábado</span>
-                                <span class="text-white">7:00 - 18:00</span>
+                                <span>Saturday</span>
+                                <span class="text-white">7:00 AM - 6:00 PM</span>
                             </li>
                             <li class="flex justify-between pb-1">
-                                <span>Domingo</span>
-                                <span class="text-white">7:00 - 15:00</span>
+                                <span>Sunday</span>
+                                <span class="text-white">7:00 AM - 3:00 PM</span>
                             </li>
                         </ul>
                     </div>
 
-                    <!-- Contactos -->
+                    <!-- Contact -->
                     <div>
-                        <h4 class="text-white font-serif text-xl font-bold mb-4">Localização</h4>
+                        <h4 class="text-white font-serif text-xl font-bold mb-4">Location</h4>
                         <ul class="space-y-3 text-stone-400">
                             <li class="flex items-start gap-3">
                                 <svg class="w-6 h-6 text-coffee-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                <span>Mainstreet, Parker, CO 80134<br>Estados Unidos</span>
+                                <span>Mainstreet, Parker, CO 80134<br>United States</span>
                             </li>
                             <li class="flex items-center gap-3">
                                 <svg class="w-5 h-5 text-coffee-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
@@ -511,9 +511,9 @@
                     </div>
                 </div>
 
-                <!-- Mapa Google (Direita) -->
+                <!-- Google Map (Right) -->
                 <div class="lg:col-span-7 h-80 lg:h-auto min-h-[400px] w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white/5 relative">
-                    <!-- O iframe do Google Maps chama a localização baseada no texto "Fika Coffee House, Parker, CO" -->
+                    <!-- The Google Maps iframe calls the location based on the text "Fika Coffee House, Parker, CO" -->
                     <iframe 
                         src="https://maps.google.com/maps?q=Fika%20Coffee%20House,%20Mainstreet,%20Parker,%20CO&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                         width="100%" 
@@ -530,37 +530,37 @@
         </div>
     </section>
 
-    <!-- FOOTER FINAL -->
+    <!-- FINAL FOOTER -->
     <footer class="bg-coffee-dark py-6 text-center text-stone-500 text-sm">
-        <p>&copy; 2023 Fika Coffee House. Todos os direitos reservados.</p>
+        <p>&copy; 2023 Fika Coffee House. All rights reserved.</p>
     </footer>
 
-    <!-- SCRIPT PARA MENU INTERATIVO -->
+    <!-- INTERACTIVE MENU SCRIPT -->
     <script>
-        function mudarAba(abaId) {
-            // 1. Esconder todos os conteúdos do menu
-            const conteudos = document.querySelectorAll('.aba-conteudo');
-            conteudos.forEach(conteudo => {
-                conteudo.classList.add('hidden');
-                conteudo.classList.remove('block');
+        function changeTab(tabId) {
+            // 1. Hide all menu contents
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
             });
 
-            // 2. Mostrar apenas o conteúdo da categoria que o utilizador selecionou
-            const abaSelecionada = document.getElementById('tab-' + abaId);
-            abaSelecionada.classList.remove('hidden');
-            abaSelecionada.classList.add('block');
+            // 2. Show only the content of the category selected by the user
+            const selectedTab = document.getElementById('tab-' + tabId);
+            selectedTab.classList.remove('hidden');
+            selectedTab.classList.add('block');
 
-            // 3. Restaurar o design visual de todos os botões (estado "inativo")
-            const botoes = document.querySelectorAll('.aba-btn');
-            botoes.forEach(botao => {
-                botao.classList.remove('bg-coffee-dark', 'text-white', 'shadow-md');
-                botao.classList.add('bg-white', 'text-stone-600', 'shadow-sm', 'border-stone-200');
+            // 3. Restore the visual design of all buttons ("inactive" state)
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(button => {
+                button.classList.remove('bg-coffee-dark', 'text-white', 'shadow-md');
+                button.classList.add('bg-white', 'text-stone-600', 'shadow-sm', 'border-stone-200');
             });
 
-            // 4. Aplicar o design destacado ao botão que acabou de ser clicado (estado "ativo")
-            const botaoAtivo = document.getElementById('btn-' + abaId);
-            botaoAtivo.classList.remove('bg-white', 'text-stone-600', 'shadow-sm', 'border-stone-200');
-            botaoAtivo.classList.add('bg-coffee-dark', 'text-white', 'shadow-md');
+            // 4. Apply the highlighted design to the button that was just clicked ("active" state)
+            const activeButton = document.getElementById('btn-' + tabId);
+            activeButton.classList.remove('bg-white', 'text-stone-600', 'shadow-sm', 'border-stone-200');
+            activeButton.classList.add('bg-coffee-dark', 'text-white', 'shadow-md');
         }
     </script>
 </body>
